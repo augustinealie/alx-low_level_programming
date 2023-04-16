@@ -2,14 +2,19 @@
 #include <stdio.h>
 
 /**
- * main - Print program's name
+ * main - Print all arguments, one per line
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: Always Success
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	int i;
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+	}
 	return (EXIT_SUCCESS);
 }
